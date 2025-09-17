@@ -1,0 +1,229 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Free  by Sameer.CO" />
+  <meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
+  <meta name="author" content="Sameer.CO" />
+
+  <title>File Compare</title>
+<!-- Facebook and Twitter integration -->
+  <meta property="og:title" content=""/>
+  <meta property="og:image" content=""/>
+  <meta property="og:url" content=""/>
+  <meta property="og:site_name" content=""/>
+  <meta property="og:description" content=""/>
+  <meta name="twitter:title" content="" />
+  <meta name="twitter:image" content="" />
+  <meta name="twitter:url" content="" />
+  <meta name="twitter:card" content="" />
+
+<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+<link rel="shortcut icon" href="{% static 'favicon.ico' %}">
+
+
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,400italic,700" rel="stylesheet" type="text/css">
+
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="{% static 'pc/stylesDocCheck.css' %}">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css">
+  <!-- Animate.css for fadeInUp effect -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+<link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
+<link rel="stylesheet" href="{% static 'css/animate.css' %}">
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+<!-- Styleswitcher ( This style is for demo purposes only, you may delete this anytime. ) -->
+<link rel="stylesheet" id="theme-switch" href="{% static 'css/style.css' %}">
+<!-- End demo purposes only -->
+
+  <style>
+    body {
+      background-color: #e3f2fd;
+    }
+    .file-upload-box {
+      background: #ffff;
+      border-radius: 22px;
+      box-shadow: 0 4px 24px 0 rgba(0,0,0,0.07);
+      padding: 2.5rem 2rem 2rem 2rem;
+      margin-top: 2.5rem;
+      margin-bottom: 2.5rem;
+      position: relative;
+    }
+    .custom-file-input:focus ~ .custom-file-label {
+      border-color: #007bff;
+      box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+    }
+    .doughnut-chart-container {
+      max-width: 260px;
+      margin: 0 auto 1.5rem auto;
+    }
+    .file-label {
+      font-weight: 600;
+      color: #1976d2;
+      font-size: 1.08rem;
+      margin-bottom: 0.7rem;
+      letter-spacing: 0.5px;
+    }
+    .compare-btn {
+      font-size: 1.15rem;
+      letter-spacing: 1px;
+      border-radius: 50px;
+      padding: 0.7rem 2.5rem;
+    }
+   .highlight {
+     background-color: yellow;
+     font-weight: bold;
+   }
+   .comparison-output {
+     border: 1px solid #ddd;
+     padding: 15px;
+     border-radius: 10px;
+     background-color: #f8f9fa;
+     margin-top: 20px;
+     height: 300px;
+     overflow-y: auto;
+   }
+  </style>
+</head>
+<body>
+{% include 'pc/partials/navbar2.html' %}
+
+  
+
+  <!-- Main Form Section -->
+
+  <div class="container content-1 py-5">
+    <div class="row justify-content-center">
+      <!-- Left: Form Section -->
+      <div class="col-12 text-content to-animate animate__animated animate__fadeInUp" style="background:rgba(255,255,255,0.99); border-radius:32px; box-shadow:0 8px 40px #b6d0f7; padding:3.2rem 2.5rem 2.5rem 2.5rem; animation-duration: 1s; animation-fill-mode: both;">
+        <a href="/" class="position-absolute" style="top:10px;left:18px;z-index:10;text-decoration:none;">
+          <i class="fas fa-arrow-left" style="font-size:1.3rem;color:#007bff;"></i>
+        </a>
+        <h1 class="text-center font-weight-bold mb-4 animate__animated animate__fadeInDown" style="font-size:2.2rem; letter-spacing:1.5px; color:#1565c0; font-family:'Segoe UI',sans-serif; text-shadow:0 3px 16px #b6d0f7;">Compare Two Files</h1>
+        <form method="POST" enctype="multipart/form-data" action="" class="to-animate animate__animated animate__fadeIn animate__delay-1s" id="file-compare-form" autocomplete="off">
+          {% csrf_token %}
+          <div class="row">
+            <div class="col-md-6 mb-4">
+              <label class="file-label" for="file1"><i class="fas fa-upload mr-2 text-primary"></i>Upload First File</label>
+              <div class="custom-file animate__animated animate__fadeInLeft animate__delay-1s">
+                <input type="file" class="custom-file-input" id="file1" name="docfile1" required>
+                <label class="custom-file-label" for="file1">Choose file...</label>
+              </div>
+            </div>
+            <div class="col-md-6 mb-4">
+              <label class="file-label" for="file2"><i class="fas fa-upload mr-2 text-primary"></i>Upload Second File</label>
+              <div class="custom-file animate__animated animate__fadeInRight animate__delay-1s">
+                <input type="file" class="custom-file-input" id="file2" name="docfile2" required>
+                <label class="custom-file-label" for="file2">Choose file...</label>
+              </div>
+            </div>
+          </div>
+          <div class="text-center mt-3">
+            <button type="submit" class="btn btn-primary compare-btn shadow-lg px-5 py-2 animate__animated animate__pulse animate__delay-2s" style="font-size:1.2rem;letter-spacing:1px;border:none;box-shadow:0 2px 12px #b6d0f7;">Compare Files <i class="fas fa-arrow-right ml-2"></i></button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    {% if result is not None %}
+    <div class="row mt-5">
+      <div class="col-12 text-center">
+        <div class="card shadow border-0 d-inline-block py-3 px-4 mx-auto result-card-enhanced" style="background: linear-gradient(120deg,#e3f0ff 70%,#f8fafc 100%); border-radius: 24px; box-shadow:0 2px 16px #b6d0f7;">
+          <span class="output-per-tot d-block mb-1" style="font-size:2rem; font-weight:900; color:#1976d2; letter-spacing:1.2px; text-shadow:0 2px 8px #b6d0f7;">Similarity: <span style="color:#007bff;">{{ result }}%</span></span>
+          {% if file1_name and file2_name %}
+          <div style="font-size:1rem; color:#444;">
+            <span><i class="fas fa-file-alt text-primary"></i> {{ file1_name }}</span> vs <span><i class="fas fa-file-alt text-primary"></i> {{ file2_name }}</span>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    
+    <div class="row mt-4">
+      <div class="col-md-6">
+        <h4 class="font-weight-bold">First File Content</h4>
+        <div class="comparison-output">
+          {{ file1_content|safe }}
+        </div>
+      </div>
+      <div class="col-md-6">
+        <h4 class="font-weight-bold">Second File Content</h4>
+        <div class="comparison-output">
+          {{ file2_content|safe }}
+        </div>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+
+  <script>
+    $(document).ready(function() {
+      $('#file-compare-form').on('submit', function(e) {
+        e.preventDefault();
+        var $form = $(this)[0];
+        var formData = new FormData($form);
+        $.ajax({
+          url: $form.action,
+          type: 'POST',
+          data: formData,
+          processData: false,
+          contentType: false,
+          success: function(data) {
+            var resultHtml = $(data).find('.result-card-enhanced');
+            if(resultHtml.length) {
+              $('.result-card-enhanced').replaceWith(resultHtml.first().clone());
+            }
+            $('#file1').val('');
+            $('#file2').val('');
+            $('.custom-file-label[for="file1"]').html('Choose file...');
+            $('.custom-file-label[for="file2"]').html('Choose file...');
+          },
+          error: function() {
+            alert('An error occurred. Please try again.');
+          }
+        });
+      });
+    });
+  </script>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+  <script>
+    // Show selected file name in custom file input
+    $(document).on('change', '.custom-file-input', function (event) {
+      var inputFile = event.currentTarget;
+      $(inputFile).parent().find('.custom-file-label').html(inputFile.files[0].name);
+    });
+
+    function scrollToHomeSection() {
+      // Try to find the Home nav section and scroll/jump to it
+      var homeLink = document.querySelector('li.active a[data-nav-section="home"]');
+      if (homeLink) {
+        homeLink.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        homeLink.focus();
+      } else {
+        // If not found, fallback to homepage
+        window.location.href = '/';
+      }
+    }
+  </script>
+<!--footer-->
+  
+    {% include 'pc/partials/footer.html' %}
+
+  
+</body>
+</html>

@@ -1,0 +1,748 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Crew &mdash; 100% Free Fully Responsive  by Sameer.co</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Free  by Sameer.CO" />
+	<meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
+	<meta name="author" content="Sameer.CO" />
+
+  <!-- 
+	//////////////////////////////////////////////////////
+
+	FREE  
+	DESIGNED & DEVELOPED by Sameer.CO
+		
+	Website: 		http://Sameer.co/
+	Email: 			info@Sameer.co
+	Twitter: 		http://twitter.com/fh5co
+	Facebook: 		https://www.facebook.com/fh5co
+
+	//////////////////////////////////////////////////////
+	 -->
+
+  <!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+<link rel="shortcut icon" href="{% static 'favicon.ico' %}">
+
+
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,400italic,700" rel="stylesheet" type="text/css">
+
+<!-- Animate.css -->
+<link rel="stylesheet" href="{% static 'css/animate.css' %}">
+<!-- Icomoon Icon Fonts-->
+<link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
+<!-- Simple Line Icons -->
+<link rel="stylesheet" href="{% static 'css/simple-line-icons.css' %}">
+<!-- Owl Carousel -->
+<link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+<!-- Bootstrap  -->
+<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+
+<!-- 
+Default Theme Style 
+You can change the style.css (default color purple) to one of these styles
+
+1. pink.css
+2. blue.css
+3. turquoise.css
+4. orange.css
+5. lightblue.css
+6. brown.css
+7. green.css
+
+-->
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+<!-- Styleswitcher ( This style is for demo purposes only, you may delete this anytime. ) -->
+<link rel="stylesheet" id="theme-switch" href="{% static 'css/style.css' %}">
+<!-- End demo purposes only -->
+
+
+	<style>
+	/* For demo purpose only */
+	
+	/* For Demo Purposes Only ( You can delete this anytime :-) */
+	#colour-variations {
+		padding: 10px;
+		-webkit-transition: 0.5s;
+		-o-transition: 0.5s;
+		transition: 0.5s;
+		width: 140px;
+		position: fixed;
+		left: 0;
+		top: 100px;
+		z-index: 999999;
+		background: #fff;
+		/*border-radius: 4px;*/
+		border-top-right-radius: 4px;
+		border-bottom-right-radius: 4px;
+		-webkit-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+		-moz-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+		-ms-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+		box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+	}
+	#colour-variations.sleep {
+		margin-left: -140px;
+	}
+	#colour-variations h3 {
+		text-align: center;;
+		font-size: 11px;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		color: #777;
+		margin: 0 0 10px 0;
+		padding: 0;;
+	}
+	#colour-variations ul,
+	#colour-variations ul li {
+		padding: 0;
+		margin: 0;
+	}
+	#colour-variations li {
+		list-style: none;
+		display: inline;
+	}
+	#colour-variations li a {
+		width: 20px;
+		height: 20px;
+		position: relative;
+		float: left;
+		margin: 5px;
+	}
+	#colour-variations li a[data-theme="style"] {
+		background: #6173f4;
+	}
+	#colour-variations li a[data-theme="pink"] {
+		background: #f64662;
+	}
+	#colour-variations li a[data-theme="blue"] {
+		background: #2185d5;
+	}
+	#colour-variations li a[data-theme="turquoise"] {
+		background: #00b8a9;
+	}
+	#colour-variations li a[data-theme="orange"] {
+		background: #ff6600;
+	}
+	#colour-variations li a[data-theme="lightblue"] {
+		background: #5585b5;
+	}
+	#colour-variations li a[data-theme="brown"] {
+		background: #a03232;
+	}
+	#colour-variations li a[data-theme="green"] {
+		background: #65d269;
+	}
+
+	.option-toggle {
+		position: absolute;
+		right: 0;
+		top: 0;
+		margin-top: 5px;
+		margin-right: -30px;
+		width: 30px;
+		height: 30px;
+		background: #f64662;
+		text-align: center;
+		border-top-right-radius: 4px;
+		border-bottom-right-radius: 4px;
+		color: #fff;
+		cursor: pointer;
+		-webkit-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+		-moz-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+		-ms-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+		box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+	}
+	.option-toggle i {
+		top: 2px;
+		position: relative;
+	}
+	.option-toggle:hover, .option-toggle:focus, .option-toggle:active {
+		color:  #fff;
+		text-decoration: none;
+		outline: none;
+	}
+	</style>
+	<!-- End demo purposes only -->
+
+
+	<!-- Modernizr JS -->
+	<script src="{% static 'js/modernizr-2.6.2.min.js' %}"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="{% static 'js/respond.min.js' %}"></script>
+	<![endif]-->
+
+	</head>
+	<body>
+{% include 'pc/partials/navbar.html' %}
+
+	<div id="slider" data-section="home">
+		<div class="owl-carousel owl-carousel-fullwidth">
+			<!-- You may change the background color here. -->
+			<div class="item" style="background: #352f44;">
+				<div class="container" style="position: relative;">
+					<div class="row">
+						<div class="col-md-7 col-sm-7">
+							<div class="fh5co-owl-text-wrap">
+								<div class="fh5co-owl-text">
+									<h1 class="fh5co-lead to-animate">Compare Your Files</h1>
+									<h2 class="fh5co-sub-lead to-animate">Easily detect similarities between documents using our free, fast, and responsive File Comparison Tool — built with modern web tech for maximum clarity.</h3>
+									<p class="to-animate-2"><a href="{% url 'file_compare' %}" class="btn btn-primary btn-lg">Check Files</a></p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 col-md-push-1 col-sm-4 col-sm-push-1 iphone-image">
+	<div class="iphone to-animate-2"><img src="{% static 'images/iphone-2.png' %}" alt="Free  by Sameer.co"></div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<!-- You may change the background color here.  -->
+			<div class="item" style="background: #38569f;">
+				<div class="container" style="position: relative;">
+					<div class="row">
+						<div class="col-md-7 col-md-push-1 col-md-push-5 col-sm-7 col-sm-push-1 col-sm-push-5">
+							<div class="fh5co-owl-text-wrap">
+								<div class="fh5co-owl-text">
+									<h1 class="fh5co-lead to-animate">AI  Checker</h1>
+									<h2 class="fh5co-sub-lead to-animate">A fast and reliable tool to compare two text inputs and reveal overlapping content — designed for academic integrity and research excellence.</h3>
+									<p class="to-animate-2"><a href="{% url 'index12' %}" class="btn btn-primary btn-lg">CHECK TEXT</a></p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 col-md-pull-7 col-sm-4 col-sm-pull-7 iphone-image">
+	<div class="iphone to-animate-2"><img src="{% static 'images/iphone-1.png' %}" alt="Free  by Sameer.co"></div>
+						</div>
+
+					</div>
+				</div>
+		</div>
+
+	<div class="item" style="background-image: url('https://ibb.co/s76syTp');">
+
+
+				<div class="overlay"></div>
+			<div class="container" style="position: relative;">
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2 text-center">
+			<div class="fh5co-owl-text-wrap">
+				<div class="fh5co-owl-text">
+					<h1 class="fh5co-lead to-animate">Welcome to Plagiarism Checker</h1>
+					<h2 class="fh5co-sub-lead to-animate">
+						This tool helps you analyze and compare two written texts to evaluate their similarity score with accuracy and clarity
+					</h2>
+					<p class="to-animate-2">
+						<a href="{% url 'text_compare' %}" class="btn btn-primary btn-lg">Check Text</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+			</div>
+
+		</div>
+	</div>
+	
+	
+	<div id="fh5co-about-us" data-section="about">
+		<div class="container">
+			<div class="row row-bottom-padded-lg" id="about-us">
+				<div class="col-md-12 section-heading text-center">
+					<h2 class="to-animate">About Us</h2>
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2 to-animate">
+							<h3>Tired of copy-paste chaos? So were we. That’s why we created a tool that spots plagiarism so you can focus on what really matters—originality.</h3>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-8 to-animate">
+				   <img src="{% static 'images/img_1.jpg' %}" class="img-responsive img-rounded" alt="Free ">
+				</div>
+				<div class="col-md-4 to-animate">
+					<h2>How we got started</h2>
+<p>Plagiarism Checker began as a simple idea: empower students and professionals to protect the originality of their work. With rising concerns about academic integrity, we built a tool that makes it easy to detect duplicate content instantly.</p>
+<p>What started as a university side project has grown into a fully functional plagiarism detection platform supporting text and file comparisons with modern, reliable algorithms.</p>
+<p><a href="mailto:Sameer4@gmail.com" class="btn btn-primary">Meet the team</a></p>
+
+				</div>
+			</div>
+			<div class="row" id="team">
+				<div class="col-md-12 section-heading text-center to-animate">
+					<h2>Team</h2>
+				</div>
+				<div class="col-md-12">
+					<div class="row row-bottom-padded-lg">
+						<div class="col-md-4 text-center to-animate">
+							<div class="person">
+							   <img src="{% static 'images/person3.png' %}" class="img-responsive img-rounded" alt="Person">
+								<h3 class="name">Kahaf Sameer</h3>
+								<div class="position">Full-Stack Developer</div>
+								<p>Lead developer of the project. Focused on creating intuitive UIs and powerful backend logic for plagiarism detection.</p>
+								<ul class="social social-circle">
+									<li><a href="https://www.linkedin.com/in/Sameer-766684373?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="icon-linkedin"></i></a></li>
+									<li><a href="https://www.instagram.com/pretty_miss556?igsh=MWhhNnp2dzRnYXFpNw=="><i class="icon-instagram"></i></a></li>
+									<li><a href="https://github.com/Kahafsameer"><i class="icon-github"></i></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-4 text-center to-animate">
+							<div class="person">
+							   <img src="{% static 'images/person2.png' %}" class="img-responsive img-rounded" alt="Person">
+		  <h3 class="name">Ikram Anwar</h3>
+		  <div class="position">UI/UX Designer</div>
+		  <p>Designed the modern, responsive user interface that makes plagiarism detection easy and engaging for everyone.</p>
+								<ul class="social social-circle">
+									<li><a href="https://www.linkedin.com/in/ikram-anwar-4a1500274?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="icon-linkedin"></i></a></li>
+									<li><a href="https://www.instagram.com/ikramanwarofficial?igsh=MW42bXFpMWhnN3V3OQ=="><i class="icon-instagram"></i></a></li>
+									<li><a href="https://dribbble.com/creatoranwar"><i class="icon-dribbble"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					<!---->	<div class="col-md-4 text-center to-animate">
+							<div class="person">
+							   <img src="{% static 'images/person4.png' %}" class="img-responsive img-rounded" alt="Person">
+		  <h3 class="name">Aliza</h3>
+		  <div class="position">ML & Search Logic</div>
+		  <p>Crafted the algorithm that powers web search and file similarity, ensuring accurate and reliable results every time.</p>
+								<ul class="social social-circle">
+									<li><a href="https://www.linkedin.com/in/alizazahid245?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="icon-linkedin"></i></a></li>
+									<li><a href="https://www.instagram.com/_aliza.75?igsh=czE4ejd0YzN4MHky"><i class="icon-instagram"></i></a></li>
+									<li><a href="https://github.com/aliza"><i class="icon-github"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="fh5co-our-services" data-section="services">
+  <div class="container">
+	<div class="row row-bottom-padded-sm">
+	  <div class="col-md-12 section-heading text-center">
+		<h2 class="to-animate">Our Services</h2>
+		<div class="row">
+		  <div class="col-md-8 col-md-offset-2 to-animate">
+			<h3>Smart plagiarism detection tailored for text, files, and web — built for precision and performance.</h3>
+		  </div>
+		</div>
+	  </div>
+	</div>
+
+	<div class="row">
+
+	  <!-- Text Compare -->
+	  <div class="col-md-4">
+		<a href="{% url 'text_compare' %}" style="text-decoration: none; color: inherit;">
+		  <div class="box to-animate">
+			<div class="icon colored-1"><span><i class="icon-doc"></i></span></div>
+			<h3>Text Comparison</h3>
+			<p>Paste any two pieces of text and compare them instantly for similarity — quick, clean, and accurate.</p>
+		  </div>
+		</a>
+
+		<!-- File Compare -->
+		 <div class="box to-animate">
+		  <div class="icon colored-3"><span><i class="icon-layers"></i></span></div>
+		  <h3>Multi-format Support</h3>
+		  <p>Supports multiple document formats — including .docx, .pdf, .rtf, .odt, and plain text files.</p>
+		</div>
+
+	  </div>
+
+	  <!-- Web Detection -->
+	  <div class="col-md-4">
+		<a href="{% url 'plagiarism-check-mainpage' %}" style="text-decoration: none; color: inherit;">
+		  <div class="box to-animate">
+			<div class="icon colored-2"><span><i class="icon-globe"></i></span></div>
+			<h3>Web Plagiarism Check</h3>
+			<p>Enter text and check against online sources using real-time web crawling and search algorithms.</p>
+		  </div>
+		</a>
+
+		<!-- Fast & Light -->
+		<div class="box to-animate">
+		  <div class="icon colored-5"><span><i class="icon-speedometer"></i></span></div>
+		  <h3>Fast & Lightweight</h3>
+		  <p>Designed for speed — optimized for low-latency checks without sacrificing accuracy or detail.</p>
+		</div>
+	  </div>
+
+	  <!-- Other Info -->
+	  <div class="col-md-4">
+	   
+		  <a href="{% url 'file_compare' %}" style="text-decoration: none; color: inherit;">
+		  <div class="box to-animate">
+			<div class="icon colored-4"><span><i class="icon-cloud-upload"></i></span></div>
+			<h3>File Comparison</h3>
+			<p>Upload and compare documents like .pdf, .docx, .rtf, .txt, and more — see the similarity percentage clearly.</p>
+		  </div>
+		  
+		</a>
+		<div class="box to-animate">
+		  <div class="icon colored-6"><span><i class="icon-heart"></i></span></div>
+		  <h3>Privacy First</h3>
+		  <p>Your data is never stored or shared. We respect your content and ensure secure processing every time.</p>
+		</div>
+	  </div>
+
+	</div>
+  </div>
+</div>
+
+	
+	<div id="fh5co-features" data-section="features">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 section-heading text-center">
+					<h2 class="single-animate animate-features-1">Features</h2>
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2 single-animate animate-features-2">
+<h3>From text scanning to file comparison — every feature is designed to help you verify originality with confidence.</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row row-bottom-padded-sm">
+	<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 fh5co-service to-animate">
+		<div class="fh5co-icon"><i class="icon-present"></i></div>
+		<div class="fh5co-desc">
+			<h3>100% Free</h3>
+			<p>No subscriptions, no hidden fees. Enjoy full access to plagiarism detection tools without paying a penny.</p>
+		</div>	
+	</div>
+	<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 fh5co-service to-animate">
+		<div class="fh5co-icon"><i class="icon-eye"></i></div>
+		<div class="fh5co-desc">
+			<h3>Retina Ready</h3>
+			<p>Optimized visuals for all devices—your plagiarism reports always look clean and professional.</p>
+		</div>
+	</div>
+	<div class="clearfix visible-sm-block visible-xs-block"></div>
+	<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 fh5co-service to-animate">
+		<div class="fh5co-icon"><i class="icon-crop"></i></div>
+		<div class="fh5co-desc">
+			<h3>Fully Responsive</h3>
+			<p>Seamless experience on desktop, tablet, or mobile—check content anytime, anywhere.</p>
+		</div>
+	</div>
+	<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 fh5co-service to-animate">
+		<div class="fh5co-icon"><i class="icon-speedometer"></i></div>
+		<div class="fh5co-desc">
+			<h3>Lightweight</h3>
+			<p>Fast, minimal, and efficient—get results in seconds without unnecessary clutter.</p>
+		</div>	
+	</div>
+	<div class="clearfix visible-sm-block visible-xs-block"></div>
+	<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 fh5co-service to-animate">
+		<div class="fh5co-icon"><i class="icon-heart"></i></div>
+		<div class="fh5co-desc">
+			<h3>Made with Love</h3>
+			<p>Built for students, teachers, and writers with care and dedication to originality and simplicity.</p>
+		</div>
+	</div>
+	<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 fh5co-service to-animate">
+		<div class="fh5co-icon"><i class="icon-umbrella"></i></div>
+		<div class="fh5co-desc">
+			<h3>Eco Friendly</h3>
+			<p>Cloud-based tool with minimal system resource usage—good for your workflow and the planet.</p>
+		</div>
+	</div>
+	<div class="clearfix visible-sm-block visible-xs-block"></div>
+</div>
+
+			<div class="row">
+				<div class="col-md-4 col-md-offset-4 single-animate animate-features-3">
+					<a href="#" class="btn btn-primary btn-block">Learn More</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="fh5co-testimonials" data-section="testimonials">		
+		<div class="container">
+	<div class="row">
+		<div class="col-md-12 section-heading text-center">
+			<h2 class="to-animate">Happy Clients Say...</h2>
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 subtext to-animate">
+					<h3>Trusted by students, educators, and professionals worldwide for quick and reliable plagiarism checks.</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-4">
+			<div class="box-testimony to-animate">
+				<blockquote>
+					<span class="quote"><span><i class="icon-quote-left"></i></span></span>
+					<p>&ldquo;This tool saved me hours of manual searching. I was able to detect unoriginal content in seconds. Absolutely essential for any academic work!&rdquo;</p>
+				</blockquote>
+				<p class="author">Ayesha Khan, Lecturer <span class="subtext">University of Karachi</span></p>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="box-testimony to-animate">
+				<blockquote>
+					<span class="quote"><span><i class="icon-quote-left"></i></span></span>
+					<p>&ldquo;I use it before submitting every blog post. It’s fast, accurate, and user-friendly. Highly recommended for content creators!&rdquo;</p>
+				</blockquote>
+				<p class="author">Ali Raza, Blogger <span class="subtext">TechVerse</span></p>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="box-testimony to-animate">
+				<blockquote>
+					<span class="quote"><span><i class="icon-quote-left"></i></span></span>
+					<p>&ldquo;Clean UI, accurate results, and completely free. As a student, this has been a game-changer for my research papers.&rdquo;</p>
+				</blockquote>
+				<p class="author">Zainab Hussain, Student <span class="subtext">IBA Karachi</span></p>
+			</div>
+		</div>
+	</div>
+</div>
+
+	</div>
+
+	<div id="fh5co-pricing" data-section="pricing">
+		<div class="container">
+	<div class="row">
+		<div class="col-md-12 section-heading text-center">
+			<h2 class="single-animate animate-pricing-1">Pricing</h2>
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 subtext single-animate animate-pricing-2">
+					<h3>Flexible plans designed for students, professionals, and institutions. Choose what fits you best!</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<!-- Starter Plan -->
+		<div class="col-md-3 col-sm-6">
+			<div class="price-box to-animate">
+				<h2 class="pricing-plan">Starter</h2>
+				<div class="price"><sup class="currency">$</sup>0<small>/mo</small></div>
+				<p>Perfect for occasional checks</p>
+				<hr>
+				<ul class="pricing-info">
+					<li>5 checks/day</li>
+					<li>Text-only input</li>
+					<li>Basic accuracy</li>
+					<li>No file uploads</li>
+				</ul>
+				<a href="#" class="btn btn-default btn-sm">Get started</a>
+			</div>
+		</div>
+
+		<!-- Standard Plan -->
+		<div class="col-md-3 col-sm-6">
+			<div class="price-box to-animate">
+				<h2 class="pricing-plan">Standard</h2>
+				<div class="price"><sup class="currency">$</sup>9<small>/mo</small></div>
+				<p>For students and bloggers</p>
+				<hr>
+				<ul class="pricing-info">
+					<li>30 checks/day</li>
+					<li>Text & file support</li>
+					<li>Detailed reports</li>
+					<li>PDF export</li>
+				</ul>
+				<a href="#" class="btn btn-default btn-sm">Get started</a>
+			</div>
+		</div>
+
+		<!-- Plus Plan -->
+		<div class="col-md-3 col-sm-6 to-animate">
+			<div class="price-box popular">
+				<div class="popular-text">Most Popular</div>
+				<h2 class="pricing-plan">Pro</h2>
+				<div class="price"><sup class="currency">$</sup>29<small>/mo</small></div>
+				<p>Great for professionals & educators</p>
+				<hr>
+				<ul class="pricing-info">
+					<li>Unlimited checks</li>
+					<li>Multiple file formats</li>
+					<li>Plagiarism percentage + sources</li>
+					<li>Priority support</li>
+				</ul>
+				<a href="#" class="btn btn-primary btn-sm">Get started</a>
+			</div>
+		</div>
+
+		<!-- Enterprise Plan -->
+		<div class="col-md-3 col-sm-6">
+			<div class="price-box to-animate">
+				<h2 class="pricing-plan">Enterprise</h2>
+				<div class="price"><sup class="currency">$</sup>99<small>/mo</small></div>
+				<p>For institutions and large teams</p>
+				<hr>
+				<ul class="pricing-info">
+					<li>Team dashboard</li>
+					<li>Unlimited everything</li>
+					<li>Integration API</li>
+					<li>Dedicated support</li>
+				</ul>
+				<a href="#" class="btn btn-default btn-sm">Contact Sales</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+	</div>
+
+	<div id="fh5co-press" data-section="press">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 section-heading text-center">
+					<h2 class="single-animate animate-press-1">Press Releases</h2>
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2 subtext single-animate animate-press-2">
+					<h3>See how Plagiarism Checker is transforming content authenticity around the globe.</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<!-- Press Item -->
+					<div class="fh5co-press-item to-animate">
+	<div class="fh5co-press-img" style="background-image: url('https://ibb.co/B59bKQhr');">
+						</div>
+						<div class="fh5co-press-text">
+							<h3 class="h2 fh5co-press-title">AI Detection Revolution <span class="fh5co-border"></span></h3>
+					<p>Our system now detects AI-generated content with cutting-edge accuracy, giving educators and creators a powerful edge against modern plagiarism.</p>
+							<p><a href="https://papermasters.org/the-role-of-ai-in-modern-plagiarism-detection/" class="btn btn-primary btn-sm">Learn more</a></p>
+						</div>
+					</div>
+					<!-- Press Item -->
+				</div>
+
+				<div class="col-md-6">
+					<!-- Press Item -->
+					<div class="fh5co-press-item to-animate">
+	<div class="fh5co-press-img" style="background-image: url('https://ibb.co/rfyPhdg5');">
+						</div>
+						<div class="fh5co-press-text">
+							<h3 class="h2 fh5co-press-title">10 Million Checks Milestone <span class="fh5co-border"></span></h3>
+					<p>With over 10 million plagiarism checks performed, we’re proud to be a trusted tool for students, teachers, and content creators worldwide.</p>
+							<p><a href="https://plagiarismcheckerx.com/global-plagiarism-live-stats" class="btn btn-primary btn-sm">Learn more</a></p>
+						</div>
+					</div>
+					<!-- Press Item -->
+				</div>
+				
+				<div class="col-md-6">
+					<!-- Press Item -->
+					<div class="fh5co-press-item to-animate">
+	<div class="fh5co-press-img" style="background-image: url('https://ibb.co/My8TXDNh');">
+						</div>
+						<div class="fh5co-press-text">
+							<h3 class="h2 fh5co-press-title">Partnership with Universities <span class="fh5co-border"></span></h3>
+					<p>We're partnering with educational institutions to bring seamless integration and real-time feedback for academic integrity at scale.</p>
+							<p><a href="https://uosahiwal.edu.pk/" class="btn btn-primary btn-sm">Learn more</a></p>
+						</div>
+					</div>
+					<!-- Press Item -->
+				</div>
+
+				<div class="col-md-6">
+					<!-- Press Item -->
+					<div class="fh5co-press-item to-animate">
+	<div class="fh5co-press-img" style="background-image: url('https://ibb.co/tTPGJM9S');">
+						</div>
+						<div class="fh5co-press-text">
+							<h3 class="h2 fh5co-press-title">Mobile Launch Success <span class="fh5co-border"></span></h3>
+					<p>Plagiarism Checker is now available on mobile! Detect copied content on the go with our newly launched Android and iOS apps.</p>
+							<p><a href="https://en.wikipedia.org/wiki/Wikipedia:Plagiarism" class="btn btn-primary btn-sm">Learn more</a></p>
+						</div>
+					</div>
+					<!-- Press Item -->
+				</div>
+
+			</div>
+		</div>
+	</div>
+	
+<!--footer-->
+	{% include 'pc/partials/footer.html' %}
+	
+	
+	<!--
+	<div id="colour-variations">
+		<a class="option-toggle"><i class="icon-gear"></i></a>
+		<h3>Preset Colors</h3>
+		<ul>
+			<li><a href="javascript: void(0);" data-theme="style"></a></li>
+			<li><a href="javascript: void(0);" data-theme="pink"></a></li>
+			<li><a href="javascript: void(0);" data-theme="blue"></a></li>
+			<li><a href="javascript: void(0);" data-theme="turquoise"></a></li>
+			<li><a href="javascript: void(0);" data-theme="orange"></a></li>
+			<li><a href="javascript: void(0);" data-theme="lightblue"></a></li>
+			<li><a href="javascript: void(0);" data-theme="brown"></a></li>
+			<li><a href="javascript: void(0);" data-theme="green"></a></li>
+		</ul>
+	</div>
+	-->
+	<!-- End demo purposes only -->
+
+	
+	<!-- jQuery -->
+
+	<script src="{% static 'js/jquery.min.js' %}"></script>
+	<!-- jQuery Easing -->
+	<script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+	<!-- Bootstrap -->
+	<script src="{% static 'js/bootstrap.min.js' %}"></script>
+	<!-- Waypoints -->
+	<script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+	<!-- Owl Carousel -->
+	<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+
+	<!-- For demo purposes only styleswitcher ( You may delete this anytime ) -->
+	<script src="{% static 'js/jquery.style.switcher.js' %}"></script>
+	<script>
+	$(function(){
+		$('#colour-variations ul').styleSwitcher({
+			defaultThemeId: 'theme-switch',
+			hasPreview: false,
+			cookie: {
+				  expires: 30,
+				  isManagingLoad: true
+			  }
+		});    
+		$('.option-toggle').click(function() {
+			$('#colour-variations').toggleClass('sleep');
+		});
+	});
+	</script>
+	<!-- End demo purposes only -->
+
+	<!-- Main JS (Do not remove) -->
+	<script src="{% static 'js/main.js' %}"></script>
+
+	</body>
+</html>
