@@ -1,0 +1,264 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plagiarism Checker | Home</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@700&display=swap" rel="stylesheet">
+  <link href="{% static 'pc/styles.css' %}" rel="stylesheet" type="text/css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Free  by Sameer.CO" />
+  <meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
+  <meta name="author" content="Sameer.CO" />
+
+  <title>File Compare</title>
+<!-- Facebook and Twitter integration -->
+  <meta property="og:title" content=""/>
+  <meta property="og:image" content=""/>
+  <meta property="og:url" content=""/>
+  <meta property="og:site_name" content=""/>
+  <meta property="og:description" content=""/>
+  <meta name="twitter:title" content="" />
+  <meta name="twitter:image" content="" />
+  <meta name="twitter:url" content="" />
+  <meta name="twitter:card" content="" />
+
+<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+<link rel="shortcut icon" href="{% static 'favicon.ico' %}">
+
+
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,400italic,700" rel="stylesheet" type="text/css">
+
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="{% static 'pc/stylesDocCheck.css' %}">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css">
+  <!-- Animate.css for fadeInUp effect -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css">
+  <!-- Animate.css for fadeInUp effect -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+<link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
+<link rel="stylesheet" href="{% static 'css/animate.css' %}">
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+<!-- Styleswitcher ( This style is for demo purposes only, you may delete this anytime. ) -->
+<link rel="stylesheet" id="theme-switch" href="{% static 'css/style.css' %}">
+<!-- End demo purposes only -->
+<style>
+  .highlight {
+    background-color: yellow;
+    font-weight: bold;
+  }
+  .highlighted-text-container {
+      border: 1px solid #ddd;
+      padding: 15px;
+      border-radius: 10px;
+      background-color: #f8f9fa;
+      margin-top: 20px;
+      height: 400px;
+      overflow-y: auto;
+  }
+</style>
+</head>
+
+<body style="background:rgb(227, 242, 255); min-height:100vh; width:100vw;">
+
+  {% include 'pc/partials/navbar2.html' %}
+
+  <!-- Back Arrow Top Left -->
+  
+  <div class="container content-1 py-5">
+    <div class="row justify-content-center">
+    
+      <!-- Left: Form Section -->
+      <div class="col-lg-7 col-md-8 col-12 text-content to-animate animate__animated animate__fadeInUp" style="background:rgba(255,255,255,0.99);min-height: 700px; border-radius:32px; box-shadow:0 8px 40px #b6d0f7; padding:3.2rem 2.5rem 2.5rem 2.5rem;">
+          <a href="/" class="position-absolute" style="top:10px;left:18px;z-index:10;text-decoration:none;">
+            <i class="fas fa-arrow-left" style="font-size:1.3rem;color:#007bff;"></i>
+             </a>
+        <h1 class="text-center font-weight-bold mb-4 animate__animated animate__fadeInDown" style="font-size:2.7rem; letter-spacing:1.7px; color:#1565c0; font-family:'Segoe UI',sans-serif; text-shadow:0 3px 16px #b6d0f7;">Check for Plagiarism Instantly</h1>
+        <div class="tab-content-1">
+          <ul class="nav nav-tabs justify-content-center mb-4 animate__animated animate__fadeIn animate__delay-1s" id="myTab" role="tablist" style="border-radius:20px;overflow:hidden;box-shadow:0 2px 12px #b6d0f7;">
+            <li class="nav-item">
+              <a class="nav-link active" id="text-tab" data-toggle="tab" href="#text-input-ws" role="tab"
+                aria-controls="text-input-ws" aria-selected="true" onclick="makeInvisible()" style="font-size:1.18rem; font-weight:700;">Text</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="file-tab" data-toggle="tab" href="#file-input-ws" role="tab"
+                aria-controls="file-input-ws" aria-selected="false" onclick="makeVisible()" style="font-size:1.18rem; font-weight:700;">File Upload</a>
+            </li>
+          </ul>
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="text-input-ws" role="tabpanel" aria-labelledby="text-tab">
+              <form id="form1-ws" action="/test/" method="POST" class="to-animate animate__animated animate__fadeIn animate__delay-1s" enctype="multipart/form-data" autocomplete="off">
+                {% csrf_token %}
+                <div class="form-group">
+                  <label for="text-1" class="font-weight-bold text-primary" style="font-size:1.22rem;">Enter Your Text Here</label>
+                  <textarea id="text-1" name="q" required rows="7" class="form-control p-3 shadow-sm animate__animated animate__fadeInLeft animate__delay-2s" style="border-radius: 26px; border: 2.5px solid #90caf9; background: linear-gradient(120deg,#fafdff 80%,#e3f0ff 100%); resize:vertical; min-height:150px; font-size:1.22rem; transition:box-shadow .2s;">{{ request.POST.q }}</textarea>
+                </div>
+                <div class="text-center mt-3">
+  <button type="submit" id="submit-button-1"
+    class="btn btn-primary px-5 py-2 shadow rounded-pill animate__animated animate__pulse animate__delay-3s mx-auto d-block"
+    style="font-size:1.25rem; letter-spacing:1.2px;">
+    Run Search
+  </button>
+</div>
+
+              </form>
+            </div>
+            <div class="tab-pane fade" id="file-input-ws" role="tabpanel" aria-labelledby="file-tab">
+              <form id="form2-ws" action="/filetest/" enctype="multipart/form-data" method="POST" class="to-animate animate__animated animate__fadeIn animate__delay-1s" autocomplete="off">
+
+                {% csrf_token %}
+                <div class="form-group">
+                  <label for="id_docfile" class="font-weight-bold text-primary" style="font-size:1.22rem;">Upload a Document</label>
+                  <input id="id_docfile" required type="file" name="docfile" accept=".txt,.pdf,.docx,.rtf,.odt" class="form-control-file mb-3 animate__animated animate__fadeInRight animate__delay-2s" style="font-size:1.22rem;" />
+                </div>
+              <button type="submit" id="submit-button-2"
+  class="btn btn-primary px-5 py-2 shadow rounded-pill animate__animated animate__pulse animate__delay-3s mx-auto d-block"
+  style="font-size:1.25rem;letter-spacing:1.2px;">
+  Run Search
+</button>
+
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Right: Result Section -->
+      <div class="col-lg-5 col-md-4 d-none d-md-flex align-items-center justify-content-center animate__animated animate__fadeInRight animate__delay-1s" style="min-height:400px;">
+        {% if percent is not None %}
+        <div class="card shadow border-0 text-center py-4 px-4 mx-auto" style="background: linear-gradient(120deg,#e3f0ff 70%,#f8fafc 100%); border-radius: 24px; max-width: 340px; box-shadow:0 2px 16px #b6d0f7;">
+          <span class="output-per-tot d-block mb-2" style="font-size:2.25rem; font-weight:900; color:#1976d2; letter-spacing:1.2px; text-shadow:0 2px 8px #b6d0f7;">{{ percent }}%</span>
+          {% if link %}
+          <div class="mb-2" style="font-size:1.09rem; color:#444;">
+            <strong>Potential Sources:</strong>
+            <ul class="output-list-1 text-left mx-auto" style="max-width:270px; overflow-y: auto; max-height: 150px;">
+              {% for links, perc in link.items %}
+                <li style="word-break: break-word;">
+                  <a href="{% if 'http' in links %}{{ links }}{% else %}https://{{ links }}{% endif %}" target="_blank" style="color: #1565c0; text-decoration: underline;">
+                    {{ links }} ({{ perc|floatformat:2 }}%)
+                  </a>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+          {% endif %}
+        </div>
+        {% endif %}
+      </div>
+    </div>
+    {% if input_text %}
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <pre></pre>
+    
+    
+    <div class="row mt-4">
+        {% if matched_text %}
+        <div class="col-md-6">
+            <h4 class="font-weight-bold">Your Text</h4>
+            <div class="highlighted-text-container">
+                <p>{{ input_text|safe }}</p>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <h4 class="font-weight-bold">Matched Text from Web</h4>
+            <div class="highlighted-text-container">
+                <p>{{ matched_text|safe }}</p>
+            </div>
+        </div>
+        {% else %}
+        <div class="col-12">
+            <h4 class="font-weight-bold">Highlighted Text</h4>
+            <div class="highlighted-text-container">
+                <p>{{ input_text|safe }}</p>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+    {% endif %}
+  </div>
+
+  <script>
+    function makeVisible() {
+      document.getElementById("submit-button-2").style.visibility = "visible";
+      document.getElementById("submit-button-1").style.visibility = "hidden";
+    }
+
+    function makeInvisible(){
+      document.getElementById("submit-button-2").style.visibility = "hidden";
+      document.getElementById("submit-button-1").style.visibility = "visible";
+    }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+
+  <script>
+    function scrollToHomeSection() {
+      // Try to find the Home nav section and scroll/jump to it
+      var homeLink = document.querySelector('li.active a[data-nav-section="home"]');
+      if (homeLink) {
+        homeLink.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        homeLink.focus();
+      } else {
+        // If not found, fallback to homepage
+        window.location.href = '/';
+      }
+    }
+  </script>
+  <!-- JQuery -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+
+
+
+<!--footer-->
+  
+  	{% include 'pc/partials/footer.html' %}
+
+
+
+</body>
+
+</html>
