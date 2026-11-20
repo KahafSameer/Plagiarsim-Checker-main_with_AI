@@ -126,8 +126,8 @@ The application supports various document formats and offers both local text com
 
 #### 1️⃣ Clone the Repository
 ```bash
-git clone https://github.com/yourusername/plagiarism-checker.git
-cd plagiarism-checker
+git clone https://github.com/KahafSameer/Plagiarsim-Checker-main_with_AI.git
+cd Plagiarsim-Checker-main_with_AI
 ```
 
 #### 2️⃣ Create Virtual Environment
@@ -147,6 +147,19 @@ source env/bin/activate
 pip install -r requirements.txt
 ```
 
+#### Environment Variables
+Set these before running (names listed in [`.env.example`](.env.example)). The app reads them with `os.environ`, so export them in your shell or hosting config:
+
+| Variable | Purpose |
+|---|---|
+| `DJANGO_SECRET_KEY` | Django secret key (required in production; a random key is generated per process if unset) |
+| `SERPER_API_KEY` | [Serper.dev](https://serper.dev) API key for the web search check |
+
+```bash
+export DJANGO_SECRET_KEY=your_django_secret_key_here     # Windows PowerShell: $env:DJANGO_SECRET_KEY="..."
+export SERPER_API_KEY=your_serper_api_key_here
+```
+
 #### 4️⃣ Download NLTK Data
 ```bash
 python -c "import nltk; nltk.download('stopwords')"
@@ -154,6 +167,7 @@ python -c "import nltk; nltk.download('stopwords')"
 
 #### 5️⃣ Run the Application
 ```bash
+python manage.py migrate      # creates the local SQLite database
 python manage.py runserver
 ```
 
@@ -269,7 +283,6 @@ If you found this project helpful:
 - **Heroku**: Ready for one-click deployment
 - **PythonAnywhere**: Easy Django hosting
 - **AWS/GCP/Azure**: Scalable cloud deployment
-- **Docker**: Containerized deployment available
 
 ---
 
