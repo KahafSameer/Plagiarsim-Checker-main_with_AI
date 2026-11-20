@@ -1,7 +1,8 @@
+import os
 import requests
 from plagiarismchecker.algorithm import ConsineSim
 
-serper_api_key = '***REMOVED***'  # Replace with your actual API key
+serper_api_key = os.getenv('SERPER_API_KEY', '')
 serper_url = 'https://google.serper.dev/search'
 
 headers = {
